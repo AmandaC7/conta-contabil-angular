@@ -1,0 +1,21 @@
+<nz-table #basicTable [nzData]="contas">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Valor</th>
+        <th>Data</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let conta of contas">
+        <td>{{conta.id}}</td>
+        <td>{{conta.valor}}</td>
+        <td>{{conta.dataCadastro}}</td>
+        <td>
+          <nz-divider nzType="vertical"></nz-divider>
+          <a>Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </nz-table>
